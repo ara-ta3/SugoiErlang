@@ -1,0 +1,10 @@
+.Python
+.ipynb_checkpoints
+
+bin
+include
+lib
+share
+pip-selfcheck.json
+
+*swp
