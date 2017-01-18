@@ -1,3 +1,6 @@
+docker_image_name=ierlang
+PORT=8080
+
 run: bin/jupyter
 	$< notebook
 
@@ -9,3 +12,10 @@ bin/pip:
 
 virtualenv:
 	virtualenv -p python3 .
+
+docker/run:
+	docker run -it --volume $(PWD):/notebooks -p 8888:8888 $(docker_image_name)
+
+docker/build:
+	docker build . -t $(docker_image_name)
+
