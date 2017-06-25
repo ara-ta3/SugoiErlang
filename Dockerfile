@@ -18,4 +18,4 @@ RUN make -C /opt/ierlang compile
 RUN mkdir -p /notebooks
 EXPOSE 8888
 # ENTRYPOINT ["tini", "--"]"--NotebookApp.port=8888", 
-CMD ["." "/opt/python3/bin/activate", "&&", "notebook", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.notebook_dir=/notebooks"]
+CMD ["/opt/python3/bin/jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.notebook_dir=/notebooks"]
