@@ -1,7 +1,11 @@
 docker_image_name=ierlang
 PORT=8080
+file=chap1.erl
 
-run: bin/jupyter
+run:
+	./$(file)
+
+run/jupyter: bin/jupyter
 	$< notebook
 
 bin/jupyter: bin/pip
