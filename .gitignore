@@ -8,3 +8,4 @@ share
 pip-selfcheck.json
 
 *swp
+*.dump
